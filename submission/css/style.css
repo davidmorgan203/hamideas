@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* Hamilton Ideas Styles */
+/* Fonts */
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('../fonts/leauge/league_gothic-webfont.eot');
+	src: local('☺'), url('../fonts/leauge/league_gothic-webfont.woff') format('woff'), url('../fonts/leauge/league_gothic-webfont.ttf') format('truetype'), url('../fonts/leauge/league_gothic-webfont.svg#webfontbtEBrCeC') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* General Styles */
+body {
+	background-color:#f6f3eb;
+	width: 100%;
+    overflow-x: hidden;
+	text-align:center;
+}
+/* Body Styles */
+#logo-block{
+	float:left;
+	margin:0 100px;
+	padding:10px 10px;
+	background-color:#022d72;
+	opacity:0.9;
+	text-align:center;
+	position:absolute;
+}
+#idea-text{
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	color:#FFF;
+	font-size:30px;
+}
+#big{
+	Width:100%;
+	Height: 100vh;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	box-shadow: inset 0 0 1em #111;
+	background-image: url( '../img/bg.jpg' );
+	text-align:center;
+	position:relative;
+}
+/* Ribbon Styles */
+.ribbon {
+  background-color: #022d72;
+  overflow: hidden;
+  white-space: nowrap;
+  width:500px;
+  /* top Right corner */
+  position: absolute;
+  right: -100px;
+  top: 130px;
+  /* 45 deg ccw rotation */
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* shadow */
+  -webkit-box-shadow: 0 0 10px #888;
+     -moz-box-shadow: 0 0 10px #888;
+          box-shadow: 0 0 10px #888;
+}
+.ribbon p {
+  border: 1px solid #1657BE;
+  color: #fff;
+  display: block;
+  font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 1px 0;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size:25px;
+  /* shadow */
+  text-shadow: 0 0 5px #444;
+}
+/* Rest of Page CSS */
+#call{
+	padding-top:15vh;
+	font-size:10vh;
+	color:#FFF;	
+	text-transform:uppercase; 
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+}
+#sub-box{
+	width:60%;
+	background-color:#022d72;
+	margin:0 auto;
+	opacity:0.9;
+	text-align:center;
+}
+#pitch{
+	opacity: 1.0;
+	text-align:center;
+	padding-top:20px;
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	font-size:4vh;
+	color:#fff;
+}
+#idea-input{
+	float:center;
+	margin:0 auto;
+	width:85%;
+	height:20vh;
+	padding:10px;
+	font-size:3vh;
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	color:#000;
+}
+#mail{
+	width:85%;
+	font-size:3vh;
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	color:#000;
+	padding:0 9px;
+}
+#idea-submit{
+	margin:1vh auto;
+	background-color:#d6ba8b;
+	padding: 5px 10px;
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	color:#FFF;
+	font-size:3vh;
+	border:none;
+}
+/* Scroll Down Message Styles */
+#scroll{
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	color:#FFF;
+	font-size:3vh;
+	margin:5px 0 5px 0;
+}
+#down{
+	opacity:0.8;
+	height:3vh;
+}
+/* Idea Display CSS */
+#idea-head{
+	margin:15px;
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	color:#022d72;
+	font-size:5vh;
+}
+#idea-container{
+	float:center; 
+	margin:0 auto;
+	text-align:center;
+}
+.idea-box{
+	width:25%;
+	margin:20px 1%;
+	background-color:#FFF;
+	height:300px;
+	display:inline-block;
+	box-shadow: 0 5px .5em #888888;
+	text-align:left;
+	overflow: hidden;
+}
+.idea-box p{
+	margin:0 15px;
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	color:#9f9f9f;
+	font-size:2.5vh;
+}
+/* Box Ribbon Styles */
+.ribbon-box {
+  background-color: #022d72;
+  overflow: hidden;
+  white-space: nowrap;
+  /* top left corner */
+  position: relative;
+  right: -130px;
+  top: 50px;
+  /* 45 deg ccw rotation */
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* shadow */
+  -webkit-box-shadow: 0 0 10px #888;
+     -moz-box-shadow: 0 0 10px #888;
+          box-shadow: 0 0 10px #888;
+}
+.ribbon-box p {
+  border: 1px solid #1657BE;
+  color: #fff;
+  display: block;
+  font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 1px 0;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size:1.5vh;
+  /* shadow */
+  text-shadow: 0 0 5px #444;
+}
+#close-top{
+	font-size:8vh;
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	color:#9f9f9f;
+}
