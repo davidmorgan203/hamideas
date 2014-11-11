@@ -19,7 +19,7 @@
 		$("textarea").textareaCounter({ limit: 100 });
 	});
 </script>
-<!-- Validate that e-mails are @hamilton.edu -->
+<!-- Validate that e-mails are @hamilton.edu & submit the form via javascript -->
 <script>
 function submitform(){
 	document.bigform.submit(function() {
@@ -62,7 +62,7 @@ function submitform()
 			<form action="submit.php" method="post" name="bigform">
 				<textarea name="idea" id="idea-input" placeholder="What's your idea?"></textarea>
 				<input type="email" name="email" id="mail" placeholder="Please enter your @hamilton.edu email"><br />
-				<a href="javascript: submitform()">Submit</a>
+				<a href="javascript: submitform()" id="idea-submit">Submit</a>
 			</form>
 		</div>
 		<?php

@@ -89,6 +89,7 @@ body {
 	margin:0 auto;
 	opacity:0.9;
 	text-align:center;
+	padding-bottom:12px;
 }
 #pitch{
 	opacity: 1.0;
@@ -114,15 +115,15 @@ body {
 	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
 	color:#000;
 	padding:0 9px;
+	margin-bottom:1.5vh;
 }
 #idea-submit{
-	margin:1vh auto;
 	background-color:#d6ba8b;
 	padding: 5px 10px;
 	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
 	color:#FFF;
 	font-size:3vh;
-	border:none;
+	text-decoration:none;
 }
 /* Scroll Down Message Styles */
 #scroll{
