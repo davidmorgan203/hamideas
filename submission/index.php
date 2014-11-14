@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Hamilton Ideas - What's Your Idea?</title>
-<meta name="description" content="A crowd-sourced innovation platform aimed at improving the Hamilton College Community" />
+<meta name="description" content="A crowd-sourced innovation platform aimed at improving the Hamilton College Community ... Walking Dreams into Reality" />
 <meta name="keywords" content="" />
 <link rel="shortcut icon" href="favicon.ico" />
 <!-- Style -->
@@ -13,39 +13,25 @@
 <!-- Javascript -->
 <!-- Including Jquery Library in Code -->
 <script src="js/jquery.js"></script>
+<!-- Including Wordcount Function for idea textarea -->
 <script src="js/wordcount.js"></script>
 <script> 
 	$(document).ready(function () {
 		$("textarea").textareaCounter({ limit: 100 });
 	});
 </script>
-<!-- Validate that e-mails are @hamilton.edu & submit the form via javascript -->
-<script>
-function submitform(){
-	document.bigform.submit(function() {
-		validateEmail($('input').val());
-		return false;
-	});
-}
-
-function validateEmail(email) {
-    var re = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-    if (re.test(email)) {
-        if (email.indexOf('@hamilton.edu', email.length - '@hamilton.edu'.length) !== -1) {
-            alert('Submission was successful.');
-        } else {
-            alert('Email must be a Hamilton e-mail address.');
-        }
-    } else {
-        alert('Not a valid e-mail address.');
-    }
-}
-
-function submitform()
-{
-  document.bigform.submit();
-}
-</script>
+<!-- AJAX Form Plug-in Submit via POST method with @hamilton.edu e-mail validation-->
+<script src="js/jquery.form.js"></script>
+<script> 
+        $(document).ready(function() { 
+            // bind 'myForm' and provide a simple callback function 
+            $('#bigform').ajaxForm(function() { 
+                alert("Submitted!");
+				document.getElementById("bigform").reset();
+            }); 
+			return false; 
+        }); 
+    </script>
 </head>
 <body>
 	<div id="big">
@@ -59,15 +45,12 @@ function submitform()
 		<h1 id="call"> How would you make Hamilton <br/> a better place? </h1>
 		<div id="sub-box">
 			<h2 id="pitch">Pitch your idea in 100 words and if the campus selects it <br/>we give you $1000 to do it.</h2>
-			<form action="submit.php" method="post" name="bigform">
+			<form action="submit.php" method="post" name="bigform" id="bigform">
 				<textarea name="idea" id="idea-input" placeholder="What's your idea?"></textarea>
 				<input type="email" name="email" id="mail" placeholder="Please enter your @hamilton.edu email"><br />
-				<a href="javascript: submitform()" id="idea-submit">Submit</a>
+				<input type="submit" id="idea-submit"></input>
 			</form>
 		</div>
-		<?php
-				
-		?>
 		<h3 id="scroll"> Scroll Down to See More Ideas</h3>
 		<img src="img/down1.png" alt="down" id="down"> <br />
 		<img src="img/dot.png" alt="down" style="opacity:0.7;" width="8px">
