@@ -63,7 +63,6 @@ body {
           box-shadow: 0 0 10px #888;
 }
 .ribbon p {
-  border: 1px solid #1657BE;
   color: #fff;
   display: block;
   font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -77,11 +76,12 @@ body {
 }
 /* Rest of Page CSS */
 #call{
-	padding-top:15vh;
-	font-size:10vh;
+	padding-top:13vh;
+	font-size:11vh;
 	color:#FFF;	
 	text-transform:uppercase; 
 	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	text-shadow: 0 3px 2px #222;
 }
 #sub-box{
 	width:60%;
@@ -138,10 +138,10 @@ body {
 }
 /* Idea Display CSS */
 #idea-head{
-	margin:15px;
+	margin:25px 15px 15px 15px;
 	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
 	color:#022d72;
-	font-size:5vh;
+	font-size:9vh;
 }
 #idea-container{
 	float:center; 
@@ -185,7 +185,6 @@ body {
           box-shadow: 0 0 10px #888;
 }
 .ribbon-box p {
-  border: 1px solid #1657BE;
   color: #fff;
   display: block;
   font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
