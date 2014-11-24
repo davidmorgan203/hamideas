@@ -22,16 +22,38 @@
 </script>
 <!-- AJAX Form Plug-in Submit via POST method with @hamilton.edu e-mail validation-->
 <script src="js/jquery.form.js"></script>
+<script>
+	function check(formData, jqForm , options) { 
+		// fieldValue is a Form Plugin method that can be invoked to find the 
+		// current value of a field 
+		// 
+		// To validate, we can capture the values of both the email 
+		// fields and return true only if both evaluate to true 
+		
+		var emailarray = $('input[name=mail]').fieldValue();
+		var email = emailarray[0];
+		console.log( email );
+		console.log( emailarray );
+		
+		if (email.indexOf("@hamilton.edu", email.length - "@hamilton.edu".length) !== -1) {
+            return true;
+        } else {
+			alert('E-mail must be a Hamilton e-mail address (@hamilton.edu).');
+            return false;
+		};
+	};
+</script>
 <script> 
         $(document).ready(function() { 
-            // bind 'myForm' and provide a simple callback function 
-            $('#bigform').ajaxForm(function() { 
+            // bind 'bigform' and callback w/ validation
+            $('#bigform').ajaxForm( {
+				beforeSubmit: check
                 alert("Submitted!");
 				document.getElementById("bigform").reset();
             }); 
 			return false; 
         }); 
-    </script>
+</script>
 </head>
 <body>
 	<div id="big">
@@ -47,7 +69,7 @@
 			<h2 id="pitch">Pitch your idea in 100 words and if the campus selects it <br/>we give you $1000 to do it.</h2>
 			<form action="submit.php" method="post" name="bigform" id="bigform">
 				<textarea name="idea" id="idea-input" placeholder="What's your idea?"></textarea>
-				<input type="email" name="email" id="mail" placeholder="Please enter your @hamilton.edu email"><br />
+				<input type="email" name="mail" id="mail" placeholder="Please enter your @hamilton.edu email"><br />
 				<input type="submit" id="idea-submit"></input>
 			</form>
 		</div>
