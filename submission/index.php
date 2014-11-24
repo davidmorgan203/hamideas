@@ -32,15 +32,23 @@
 		
 		var emailarray = $('input[name=mail]').fieldValue();
 		var email = emailarray[0];
-		console.log( email );
-		console.log( emailarray );
-		
-		if (email.indexOf("@hamilton.edu", email.length - "@hamilton.edu".length) !== -1) {
-            return true;
-        } else {
-			alert('E-mail must be a Hamilton e-mail address (@hamilton.edu).');
-            return false;
+		var ideaValue = $('textarea[name=idea]').fieldValue(); 
+
+		// ideaValue and emailarray are arrays but we can do simple 
+		// "not" tests to see if the arrays are empty
+		// And there's the nested @hamilton.edu email validation if it passes
+		if (!ideaValue[0] || !emailarray[0]) { 
+			alert('Please enter both an Idea and your @hamilton.edu e-mail address'); 
+			return false; 
+		} else {
+			if (email.indexOf("@hamilton.edu", email.length - "@hamilton.edu".length) !== -1) {
+				return true;
+			} else {
+				alert('E-mail must be a Hamilton e-mail address (@hamilton.edu).');
+				return false;
+			};
 		};
+		
 	};
 </script>
 <script> 
@@ -48,8 +56,8 @@
             // bind 'bigform' and callback w/ validation
             $('#bigform').ajaxForm( {
 				beforeSubmit: check
-                alert("Submitted!");
-				document.getElementById("bigform").reset();
+                //alert("Submitted!");
+				//document.getElementById("bigform").reset();
             }); 
 			return false; 
         }); 
