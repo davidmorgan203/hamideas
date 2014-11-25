@@ -50,14 +50,19 @@
 		};
 		
 	};
+	// Success function
+	function response(responseText, statusText, xhr, $form){ 
+		alert('Your idea was successfully submitted! Thanks so much!');
+	};
 </script>
 <script> 
         $(document).ready(function() { 
             // bind 'bigform' and callback w/ validation
             $('#bigform').ajaxForm( {
-				beforeSubmit: check
-                //alert("Submitted!");
-				//document.getElementById("bigform").reset();
+				beforeSubmit: check,
+				clearForm: true,
+				success: response
+                //
             }); 
 			return false; 
         }); 
