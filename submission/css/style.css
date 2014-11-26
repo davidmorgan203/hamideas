@@ -107,15 +107,15 @@ body {
 	padding:10px;
 	font-size:3vh;
 	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
-	color:#000;
+	color:#010C1F;
 }
 #mail{
 	width:85%;
 	font-size:3vh;
 	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
-	color:#000;
 	padding:0 9px;
 	margin-bottom:1.5vh;
+	color:#010C1F;
 }
 #idea-submit{
 	background-color:#d6ba8b;
@@ -124,6 +124,7 @@ body {
 	color:#FFF;
 	font-size:3vh;
 	text-decoration:none;
+	border:none;
 }
 /* Scroll Down Message Styles */
 #scroll{
@@ -200,4 +201,30 @@ body {
 	font-size:8vh;
 	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
 	color:#9f9f9f;
+}
+/* Modal Window Styling */
+.popup{
+	display:none;
+	padding:10px;
+	background-color:#022d72;
+	opacity:0.9;
+}
+.popupContainer{
+	background-color:#FFF;
+	color:#010C1F;
+	padding: 35px;
+	min-width:200px;
+	/*box-shadow: 0 0 25px 5px #022d72; */
+	font-size:4vh;
+	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+}
+.popupContainer h1{
+	padding-bottom:20px;
+}
+.popClose{
+	margin:10px auto 0 auto;
+	background-color:#d6ba8b;
+	color:#FFF;
+	padding:5px 10px;
+	cursor:pointer;
 }

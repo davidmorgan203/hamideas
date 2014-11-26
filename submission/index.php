@@ -37,22 +37,35 @@
 		// ideaValue and emailarray are arrays but we can do simple 
 		// "not" tests to see if the arrays are empty
 		// And there's the nested @hamilton.edu email validation if it passes
-		if (!ideaValue[0] || !emailarray[0]) { 
-			alert('Please enter both an Idea and your @hamilton.edu e-mail address'); 
+		if (!ideaValue[0] || !emailarray[0]) {
+			$('#errorEmpty').bPopup({
+				opacity: 0.3,
+				fadeSpeed: 'slow',
+				positionStyle: 'fixed' //'fixed' or 'absolute'
+			});			
 			return false; 
 		} else {
 			if (email.indexOf("@hamilton.edu", email.length - "@hamilton.edu".length) !== -1) {
 				return true;
 			} else {
-				alert('E-mail must be a Hamilton e-mail address (@hamilton.edu).');
+				$('#errorEmail').bPopup({
+					opacity: 0.3,
+					fadeSpeed: 'slow',
+					positionStyle: 'fixed' //'fixed' or 'absolute'
+				});			
 				return false;
 			};
 		};
 		
 	};
 	// Success function
-	function response(responseText, statusText, xhr, $form){ 
-		alert('Your idea was successfully submitted! Thanks so much!');
+	function response(responseText, statusText, xhr, $form){
+		$('#success').bPopup({
+            opacity: 0.3,
+			autoClose: 4000,
+			fadeSpeed: 'slow',
+            positionStyle: 'fixed' //'fixed' or 'absolute'
+        });
 	};
 </script>
 <script> 
@@ -67,6 +80,8 @@
 			return false; 
         }); 
 </script>
+<!-- Modal JS Plug-in See bottom for accompanying divs-->
+<script src="js/jquery.bpopup.min.js"></script>
 </head>
 <body>
 	<div id="big">
@@ -120,5 +135,24 @@
 		</div>
 	</div>
 	<p id="close-top"> What's your idea?</p>
+	<!-- Modal Pop-Ups -->
+	<div class="popup" id="success">
+		<div class="popupContainer">
+			<h1>Your idea was successfully submitted! Thanks so much!</h1>
+			<span class="popClose b-close"> Close </span>
+		</div>
+	</div>
+	<div class="popup" id="errorEmpty">
+		<div class="popupContainer">
+			<h1>Please enter both an Idea and your @hamilton.edu e-mail address</h1>
+			<span class="popClose b-close"> Close </span>
+		</div>
+	</div>
+	<div class="popup" id="errorEmail">
+		<div class="popupContainer">
+			<h1>E-mail must be a Hamilton e-mail address (@hamilton.edu)</h1>
+			<span class="popClose b-close"> Close </span>
+		</div>
+	</div>
 </body>
 </html>
