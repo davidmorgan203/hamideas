@@ -8,6 +8,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/BebasNeue-Bold.otf');
+	font-weight: normal;
+	font-style: normal;
+}
 /* General Styles */
 body {
 	background-color:#f6f3eb;
@@ -80,7 +86,7 @@ body {
 	font-size:11vh;
 	color:#FFF;	
 	text-transform:uppercase; 
-	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	font-family:'Bebas', Verdana, Geneva, sans-serif;
 	text-shadow: 0 3px 2px #222;
 }
 #sub-box{
@@ -120,11 +126,17 @@ body {
 #idea-submit{
 	background-color:#d6ba8b;
 	padding: 5px 10px;
-	font-family:'LeagueGothicRegular', Verdana, Geneva, sans-serif;
+	font-family:'Bebas', Verdana, Geneva, sans-serif;
 	color:#FFF;
 	font-size:3vh;
 	text-decoration:none;
 	border:none;
+	cursor:pointer;
+	transition: all .2s ease-in-out;
+}
+#idea-submit:hover{
+	cursor:pointer;
+	color:#010C1F;
 }
 /* Scroll Down Message Styles */
 #scroll{
