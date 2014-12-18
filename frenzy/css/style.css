@@ -8,6 +8,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/BebasNeue-Bold.otf');
+	font-weight: normal;
+	font-style: normal;
+}
 /* General Styles */
 body {
 	background-color:#f6f3eb;
