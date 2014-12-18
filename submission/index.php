@@ -138,19 +138,19 @@
 	<!-- Modal Pop-Ups -->
 	<div class="popup" id="success">
 		<div class="popupContainer">
-			<h1>Your idea was successfully submitted! Thanks so much!</h1>
+			<h1>Awesome Idea! We'll take it from here.</h1>
 			<span class="popClose b-close"> Close </span>
 		</div>
 	</div>
 	<div class="popup" id="errorEmpty">
 		<div class="popupContainer">
-			<h1>Please enter both an Idea and your @hamilton.edu e-mail address</h1>
+			<h1>Whoops! <br> We need both your idea and your @hamilton.edu e-mail address</h1>
 			<span class="popClose b-close"> Close </span>
 		</div>
 	</div>
 	<div class="popup" id="errorEmail">
 		<div class="popupContainer">
-			<h1>E-mail must be a Hamilton e-mail address (@hamilton.edu)</h1>
+			<h1>Sorry we've gotta keep this on the hill. <br> Your e-mail must be a Hamilton e-mail address (@hamilton.edu)</h1>
 			<span class="popClose b-close"> Close </span>
 		</div>
 	</div>
